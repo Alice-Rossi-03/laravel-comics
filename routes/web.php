@@ -1,6 +1,8 @@
 <?php
 
+// use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home\HomeController as HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', [HomeController::class, 'HomeCon'])->name('homePage');
+Route::get('/about', [HomeController::class, 'AboutCon'])->name('aboutPage');

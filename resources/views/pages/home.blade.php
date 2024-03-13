@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/js/app.js')
+@extends('layouts.layout')
 
-</head>
-<body>
+@section('title', 'DC Comics | Home')
 
-</body>
-</html>
+@section('content')
+
+<main>
+    <div class="container-1">
+
+        <div class="current-series">CURRENT SERIES</div>
+
+        @foreach ( $comics as $element)
+        <div class="comic">
+            <img src="{{ $element['thumb'] }}" alt="{{ $element['title'] }}">
+            <div class="title">{{ $element['title'] }}</div>
+        </div>
+        @endforeach
+
+
+        <a href="#">Load More</a>
+    </div>
+</main>
+
+@endsection
