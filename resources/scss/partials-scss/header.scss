@@ -89,11 +89,14 @@
         }
     }
 
-    .bg-jumbotron{
-        background-image: url('../images/jumbotron.jpg');
-        height: 20em;
-        background-size: cover;
-        width: 100%;
-    }
 
+
+}
+.bg-jumbotron{
+    // background-image: url("{{Vite::asset('resources/images/jumbotron.jpg)}}");
+    background-image: url('../images/jumbotron.jpg');
+    height: 20em;
+    // border: 1px solid red;
+    background-size: cover;
+    width: 100%;
 }
